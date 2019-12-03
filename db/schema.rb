@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_113133) do
+ActiveRecord::Schema.define(version: 2019_12_03_112827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 2019_12_03_113133) do
     t.index ["user_id"], name: "index_children_on_user_id"
   end
 
+  create_table "reminders", force: :cascade do |t|
+    t.string "name"
+    t.date "date"
+    t.bigint "children_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["children_id"], name: "index_reminders_on_children_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -44,4 +53,5 @@ ActiveRecord::Schema.define(version: 2019_12_03_113133) do
   end
 
   add_foreign_key "children", "users"
+  add_foreign_key "reminders", "children", column: "children_id"
 end
