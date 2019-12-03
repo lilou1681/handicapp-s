@@ -8,7 +8,7 @@ class CreateChildren < ActiveRecord::Migration[5.2]
       t.string :nationality
       t.string :country
       t.string :address
-      t.integer :security_number
+      t.string :security_number
       t.string :life_project
       t.references :user, foreign_key: true
 
