@@ -1,0 +1,13 @@
+<ul>
+   <li><%= link_to (cl_image_tag @child.photo, height: 200, width: 200, crop: :fill) %></li>
+   <li>First name : <%= @child.first_name %></li>
+   <li>Last name : <%= @child.last_name %></li>
+   <li>Birthday : <%= @child.birth_day %></li>
+   <li>Gender : <%= @child.gender %></li>
+   <li>Nationality : <%= @child.nationality %></li>
+   <li>Address : <%= @child.address %></li>
+   <li>Country : <%= @child.country %></li>
+   <li>Security Number : <%= @child.security_number %></li>
+</ul>
+
+<%= link_to "Back to list", children_path, class: 'btn btn-primary btn-lg'%>
