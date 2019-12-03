@@ -11,4 +11,5 @@ class Children < ApplicationRecord
   validates :address, presence: true
   validates :security_number, uniqueness: true, presence: true, length: { is: 15, message:  "Your security number must be at least 15 letters." }
   validates :life_project, presence: true
+  mount_uploader :photo, PhotoUploader
 end
