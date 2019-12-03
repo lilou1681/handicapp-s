@@ -34,7 +34,7 @@ puts "Start Seeding ..."
     nationality:Faker::Nation.nationality,
     country: Faker::Address.city,
     address: Faker::Address.street_address,
-    security_number:Faker::Number.number(digits: 13),
+    security_number:Faker::Number.number(digits: 15),
     life_project: Faker::Lorem.paragraph  ,
   )
     reminder = Reminder.create!(
