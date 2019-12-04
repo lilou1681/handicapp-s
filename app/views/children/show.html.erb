@@ -17,7 +17,7 @@
 </ul>
 
 <%= simple_form_for(@child) do |f| %>
-  <%= f.input :life_project %>
+  <%= f.input :life_project, as: :summernote %>
   <%= f.button :submit, "Save", class: "btn" %>
 <% end %>
 </br>
@@ -25,3 +25,14 @@
 </br>
 <%= link_to "Back to list", children_path, class: 'btn btn-lg'%>
 
+<div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown link
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
