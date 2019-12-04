@@ -1,0 +1,13 @@
+.btn{
+  background-color: #F88A2B;
+  color: #ffffff;
+  border: 1px solid #F88A2B;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-size: 20px;
+  &:hover {
+    background-color: #FFCC36;
+    border: 1px solid #FFCC36;
+    opacity: 0.7;
+  }
+}

@@ -1,4 +1,5 @@
 <div class="container">
+  <%= link_to 'Ajouter un enfant', new_child_path, class: 'btn btn-primary p-1' %>
   <% if @children.present? %>
   <% @children.each do |child| %>
   <div class="card-product">
@@ -13,14 +14,14 @@
     </div>
     <div class="card-product-button-edit">
       <p>
-        <%= link_to edit_child_path(child), class: 'btn btn-primary p-1' do %>
+        <%= link_to edit_child_path(child), class: 'btn p-1' do %>
         <i class="fas fa-edit"></i>
         <% end %>
       </p>
     </div>
     <div class="card-product-button-delete">
       <p>
-        <%= link_to child_path(child), method: :delete, data: { confirm: "Sur to delete?" }, class: 'btn btn-primary p-1 mb-4' do %>
+        <%= link_to child_path(child), method: :delete, data: { confirm: "Sur to delete?" }, class: 'btn p-1 mb-4' do %>
         <i class="fas fa-trash"></i>
         <% end %>
       </p>

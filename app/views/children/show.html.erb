@@ -10,12 +10,18 @@
    <li>Country : <%= @child.country %></li>
    <li>Security Number : <%= @child.security_number %></li>
    <li>Life Project : <%= @child.life_project %></li>
+   <% @reminders.each do |reminder| %>
+    <li>Reminder Name : <%= reminder.name %></li>
+    <li>Reminder Date : <%= reminder.date %></li>
+   <% end %>
 </ul>
 
 <%= simple_form_for(@child) do |f| %>
   <%= f.input :life_project %>
-  <%= f.button :submit, "Save", class: "btn btn-primary" %>
+  <%= f.button :submit, "Save", class: "btn" %>
 <% end %>
 </br>
-<%= link_to "Back to list", children_path, class: 'btn btn-primary btn-lg'%>
+<%= render "reminders/form" %>
+</br>
+<%= link_to "Back to list", children_path, class: 'btn btn-lg'%>
 
