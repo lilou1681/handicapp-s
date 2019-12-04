@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_12_03_155252) do
     t.string "nationality"
     t.string "country"
     t.string "address"
-    t.integer "security_number"
+    t.string "security_number"
     t.string "life_project"
     t.bigint "user_id"
     t.datetime "created_at", null: false
