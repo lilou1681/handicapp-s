@@ -18,9 +18,9 @@ puts "Start Seeding ..."
 
 5.times do
   user = User.create!(
-    email: Faker::Internet.email,
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
     password: "password",
     password_confirmation: "password",
     address: Faker::Address.street_address,
