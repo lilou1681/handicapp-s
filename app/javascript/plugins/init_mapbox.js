@@ -1,6 +1,6 @@
 import mapboxgl from 'mapbox-gl';
 
-const mapElement = document.getElementById('map');
+const mapElement = document.querySelector('#map');
 
 const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
@@ -25,7 +25,11 @@ const fitMapToMarkers = (map, markers) => {
 };
 
 const initMapbox = () => {
+
+
   if (mapElement) {
+
+
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers);
