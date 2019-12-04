@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+ # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -11,8 +11,7 @@ require 'faker'
 puts "Cleaning Database ..."
 
 User.destroy_all
-Children.destroy_all
-Reminder.destroy_all
+Organization.destroy_all
 
 puts "Start Seeding ..."
 
@@ -45,6 +44,30 @@ puts "Start Seeding ..."
       date: Faker::Date.between(from: 2.days.ago, to: Date.today)
       )
 end
+
+    organization = Organization.create!(
+      name: "MDPH du Var",
+      adress: "293 Route de la Seyne , 83190 Ollioules",
+      phone_number: "04 94 05 10 40",
+      email: "mdph83@mdph.fr",
+      website: "https://mdph.var.fr/"
+      )
+    organization = Organization.create!(
+      name: "MDPH des bouches du rhone",
+      adress: "4 Boulevard Euromediterranée Quai d'Arenc, 13002 Marseille",
+      phone_number: "0 800 81 48 44",
+      email: "mdph13@mdph.fr",
+      website: "http://www.mdph13.fr/"
+      )
+    organization = Organization.create!(
+      name: "MDPH du Vaucluse",
+      adress: "22 Boulevard Saint-Michel, 84000 Avignon",
+      phone_number: "0 800 80 05 79",
+      email: "mdph84@mdph.fr",
+      website: "http://www.mdph.fr/"
+      )
+
 puts "#{User.count} users created"
 puts "#{Children.count} childrens created"
 puts "#{Reminder.count} reminders created"
+puts "#{Organization.count} organization created"

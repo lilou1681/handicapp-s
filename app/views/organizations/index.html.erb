@@ -1,0 +1,17 @@
+<h1>Adresses utiles</h1>
+
+ <% @organizations.each do |organization| %>
+ <p><%= organization.name %></p>
+ <p><%= organization.adress %></p>
+ <p><%= organization.phone_number %></p>
+ <p><%= organization.website %></p>
+ <br>
+ <% end %>
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
