@@ -1,3 +1,4 @@
+<%= render 'shared/flashes' %>
 <ul>
    <li><%= link_to (cl_image_tag @child.photo, height: 200, width: 200, crop: :fill) %></li>
    <li>First name : <%= @child.first_name %></li>
@@ -8,6 +9,13 @@
    <li>Address : <%= @child.address %></li>
    <li>Country : <%= @child.country %></li>
    <li>Security Number : <%= @child.security_number %></li>
+   <li>Life Project : <%= @child.life_project %></li>
 </ul>
 
+<%= simple_form_for(@child) do |f| %>
+  <%= f.input :life_project %>
+  <%= f.button :submit, "Save", class: "btn btn-primary" %>
+<% end %>
+</br>
 <%= link_to "Back to list", children_path, class: 'btn btn-primary btn-lg'%>
+

@@ -1,6 +1,7 @@
 <div class="container">
+  <% if @children.present? %>
+  <% @children.each do |child| %>
   <div class="card-product">
-    <% @children.each do |child| %>
     <%= link_to (cl_image_tag child.photo, height: 200, width: 200, crop: :fill), child_path(child) %>
     <div class="card-product-infos">
       <div class="d-flex">
@@ -24,6 +25,7 @@
         <% end %>
       </p>
     </div>
-    <% end %>
   </div>
+  <% end %>
+  <% end %>
 </div>

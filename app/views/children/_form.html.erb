@@ -2,12 +2,12 @@
   <%= f.input :first_name %>
   <%= f.input :last_name %>
   <%= f.input :birth_day, html5: true %>
-  <%= f.input :gender %>
+  <%= f.input :gender, collection: Children::GENDERS %>
   <%= f.input :nationality %>
   <%= f.input :country, as: :string %>
   <%= f.input :address %>
   <%= f.input :security_number %>
-  <%= f.input :life_project %>
+<!--   <%= f.input :life_project %> -->
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= f.button :submit, class: "btn btn-primary" %>

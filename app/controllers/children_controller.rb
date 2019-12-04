@@ -18,8 +18,10 @@ class ChildrenController < ApplicationController
     @child = Children.new(children_params)
     @child.user = current_user
     if @child.save
+      flash[:notice] = "The child has been registered"
       redirect_to child_path(@child)
     else
+      flash[:alert] = "Error, the child couldn't be registered"
       render :new
     end
   end
@@ -30,8 +32,10 @@ class ChildrenController < ApplicationController
   def update
     @child.update(children_params)
     if @child.save
+      flash[:notice] = "The child has been updated"
       redirect_to child_path(@child)
     else
+      flash[:alert] = "Error, the child couldn't be updated"
       render :edit
     end
   end
