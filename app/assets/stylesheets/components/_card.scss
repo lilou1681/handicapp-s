@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell&display=swap');
+
+.card-product {
+  position: relative;
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.card-product a {
+  font-size: 24px;
+  font-family: 'Cantarell', sans-serif;
+  font-weight: bold;
+  color: #F88A2B;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product p {
+  font-size: 14px;
+  font-family: 'Cantarell', sans-serif;
+  color: #191919;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.card-product-button-edit {
+  position:absolute;
+  right : 100px;
+  padding-top: 43px;
+  margin-right: -27px;
+  width: 20px;
+}
+
+.card-product-button-delete {
+  position:absolute;
+  right : 0;
+  padding-right: 20px;
+  padding-top: 67px;
+}
+
+.card-product-button-edit .btn{
+  background-color: #F88A2B;
+  color: #ffffff;
+  border: 1px solid #F88A2B;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-size: 20px;
+  &:hover {
+    background-color: #FFCC36;
+    border: 1px solid #FFCC36;
+    opacity: 0.7;
+  }
+}
+
+.card-product-button-delete .btn{
+  background-color: #F88A2B;
+  color: #ffffff;
+  border: 1px solid #F88A2B;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-size: 20px;
+  &:hover {
+    background-color: #FFCC36;
+    border: 1px solid #FFCC36;
+    opacity: 0.7;
+  }
+}
