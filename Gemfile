@@ -20,6 +20,15 @@ gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'geocoder'
 
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'coffee-rails'
+gem 'turbolinks'
+gem 'summernote-rails', '~> 0.8.12.0'
+
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
