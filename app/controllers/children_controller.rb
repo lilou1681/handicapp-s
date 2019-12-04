@@ -1,5 +1,5 @@
 class ChildrenController < ApplicationController
-  skip_before_action :authenticate_user!
+  before_action :authenticate_user!
   before_action :set_child, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -7,6 +7,12 @@ class ChildrenController < ApplicationController
   end
 
   def show
+    if @child.user != current_user
+      redirect_to children_path
+    else
+      @reminder = Reminder.new
+      @reminders = Reminder.where(children: @child)
+    end
   end
 
   def new
@@ -44,6 +50,8 @@ class ChildrenController < ApplicationController
     @child.destroy
     redirect_to children_path
   end
+
+  private
 
   def set_child
     @child = Children.find(params[:id])
