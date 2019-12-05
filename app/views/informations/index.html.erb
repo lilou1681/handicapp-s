@@ -1,0 +1,15 @@
+<h1>Informations Pratiques</h1>
+
+<%= form_tag informations_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a Information"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
+<% @informations.each do |information| %>
+    <h3><%= information.title %></h3>
+    <h3> <%= information.content %></h3>
+<% end %>
