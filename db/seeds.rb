@@ -79,7 +79,32 @@ end
       remote_photo_url: "https://picsum.photos/id/80/200/300"
       )
 
+    information = Information.create!(
+      title: "Qu'est ce que la MDPH ?",
+      content: "Créée par la loi de 2005,
+                la Maison départementale des personnes handicapées (MDPH)
+                exerce une mission d’accueil, d’information, d’accompagnement
+                et de conseil des personnes en situation de handicap et de leurs familles
+                ainsi que de sen-sibilisation de tous les citoyens aux handicaps."
+      )
+    information = Information.create!(
+      title: "Carte mobilité inclusion",
+      content: "La carte mobilité inclusion (CMI) a pour but de faciliter la vie quotidienne
+                des personnes en situation de handicap et de perte d'autonomie.
+                Elle est accordée sous conditions et permet de bénéficier de certains droits
+                notamment dans les transports."
+      )
+    information = Information.create!(
+      title: "EMPLOI ET FORMATION",
+      content: "La loi du 11 février 2005 pour l’égalitédes droits et des chances,
+                la participation et lacitoyennetédes personnes handicapées,
+                pose le principe de non-discrimination des personnes en situation
+                de handicap en particulier dans le domaine de l’emploi,
+                en promouvant l’accès aux dispositifs de droit commun et en faisant du travail ordinaire une priorite"
+      )
+
 puts "#{User.count} users created"
 puts "#{Children.count} childrens created"
 puts "#{Reminder.count} reminders created"
 puts "#{Organization.count} organization created"
+puts "#{Information.count} informations created"

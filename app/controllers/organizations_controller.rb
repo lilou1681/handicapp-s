@@ -1,5 +1,4 @@
 class OrganizationsController < ApplicationController
-
   def index
     @organizations = Organization.all
     @organizations_geo = Organization.geocoded
