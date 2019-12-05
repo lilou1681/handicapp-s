@@ -59,7 +59,7 @@ end
       phone_number: "0 800 81 48 44",
       email: "mdph13@mdph.fr",
       website: "http://www.mdph13.fr/",
-      photo:"http://www.mdph13.fr/ImagesMDPH/Logo_mdph.png"
+      remote_photo_url:"http://www.ash13.ien.13.ac-aix-marseille.fr/spip/sites/www.ash13.ien.13/spip/local/cache-vignettes/L212xH125/Capture_d_e_cran_2014-01-17_a_07-59-15-1cd44.png"
       )
     organization = Organization.create!(
       name: "MDPH du Vaucluse",
@@ -67,7 +67,7 @@ end
       phone_number: "0 800 80 05 79",
       email: "mdph84@mdph.fr",
       website: "http://www.mdph.fr/",
-      photo:"http://img.over-blog-kiwi.com/300x300/1/54/21/63/20150708/ob_be8fae_logo-mdph.jpg"
+      remote_photo_url:"http://img.over-blog-kiwi.com/300x300/1/54/21/63/20150708/ob_be8fae_logo-mdph.jpg"
       )
     user = User.create!(
       first_name: "hello",
