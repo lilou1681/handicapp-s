@@ -5,7 +5,8 @@ class ReminderJob < ApplicationJob
     reminders = Reminder.where(date: Date.today)
     reminders.each do |reminder|
       reminder.children
-      reminder.children.user
+      reminder.children.user.email
+      ReminderMailer.notification(reminder).deliver_now
 
       puts "#{reminder.name}"
       # Mailer
