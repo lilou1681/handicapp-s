@@ -50,21 +50,33 @@ end
       adress: "293 Route de la Seyne , 83190 Ollioules",
       phone_number: "04 94 05 10 40",
       email: "mdph83@mdph.fr",
-      website: "https://mdph.var.fr/"
+      website: "https://mdph.var.fr/",
+      remote_photo_url: "https://mdph.var.fr/image/layout_set_logo?img_id=37636&t=1575173111468"
       )
     organization = Organization.create!(
       name: "MDPH des bouches du rhone",
       adress: "4 Boulevard Euromediterranée Quai d'Arenc, 13002 Marseille",
       phone_number: "0 800 81 48 44",
       email: "mdph13@mdph.fr",
-      website: "http://www.mdph13.fr/"
+      website: "http://www.mdph13.fr/",
+      photo:"http://www.mdph13.fr/ImagesMDPH/Logo_mdph.png"
       )
     organization = Organization.create!(
       name: "MDPH du Vaucluse",
       adress: "22 Boulevard Saint-Michel, 84000 Avignon",
       phone_number: "0 800 80 05 79",
       email: "mdph84@mdph.fr",
-      website: "http://www.mdph.fr/"
+      website: "http://www.mdph.fr/",
+      photo:"http://img.over-blog-kiwi.com/300x300/1/54/21/63/20150708/ob_be8fae_logo-mdph.jpg"
+      )
+    user = User.create!(
+      first_name: "hello",
+      last_name: "test",
+      email: "hello@test.com",
+      password: "123456",
+      password_confirmation: "123456",
+      address: "167 rue paradis 13006 marseille",
+      remote_photo_url: "https://picsum.photos/id/80/200/300"
       )
 
 puts "#{User.count} users created"
