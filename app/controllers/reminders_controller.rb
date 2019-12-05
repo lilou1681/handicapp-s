@@ -5,7 +5,6 @@ class RemindersController < ApplicationController
     @reminder.children = @child
     if @reminder.save
       flash[:notice] = "The reminder has been registered"
-      ReminderJob.set(wait_until: @reminder.date - 1.day).perform_later
       redirect_to child_path(@child)
     else
       flash[:alert] = "Error, the reminder couldn't be registered"

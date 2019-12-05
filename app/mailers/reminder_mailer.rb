@@ -10,7 +10,7 @@ class ReminderMailer < ApplicationMailer
     @user = reminder.children.user # Instance variable => available in view
     mail(
       to: @user.email,
-      subject: "Rappel pour #{reminder.name} d'aujourd'hui")
+      subject: "Rappel pour #{reminder.name} du #{reminder.date}")
     # This will render a view in `app/views/user_mailer`!
   end
 end
