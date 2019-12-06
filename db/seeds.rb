@@ -12,6 +12,7 @@ puts "Cleaning Database ..."
 
 User.destroy_all
 Organization.destroy_all
+Information.destroy_all
 
 puts "Start Seeding ..."
 
