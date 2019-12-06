@@ -8,14 +8,14 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-      <li class="nav-item active">
+      <li class="nav-item active btn-orange">
         <%= link_to "Accueil", root_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
         <%= link_to "Adresses Utiles", organizations_path, class: "nav-link" %>
       </li>
        <li class="nav-item">
-        <%= link_to "Informations pratiques", "#", class: "nav-link" %>
+        <%= link_to "Informations pratiques", informations_path, class: "nav-link" %>
       </li>
       <li class="nav-item dropdown">
         <% if(current_user.photo.present?)%>
@@ -37,12 +37,12 @@
         <%= link_to "Adresses utiles", organizations_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Informations pratiques", "#" , class: "nav-link" %>
+        <%= link_to "Informations pratiques", informations_path , class: "nav-link" %>
       </li>
-      <li class="nav-item">
+      <li class="nav-item btn-orange ">
         <%= link_to "S'inscrire", new_user_registration_path , class: "nav-link" %>
       </li>
-      <li class="nav-item">
+      <li class="nav-item btn-orange">
         <%= link_to "Se connecter", new_user_session_path, class: "nav-link" %>
       </li>
       <% end %>

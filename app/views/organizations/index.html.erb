@@ -2,13 +2,14 @@
   <h2 class="d-flex justify-content-center">Adresses utiles</h2>
   <div class="row">
     <div class="col-6">
+      <hr>
       <% @organizations.each do |organization| %>
       <%= link_to (cl_image_tag organization.photo, height: 80, width: 160, crop: :fill) %>
       <h3><%= organization.name %></h3>
-      <p><%= organization.adress %></p>
-      <p><%= organization.phone_number %></p>
-      <p><%= organization.website %></p>
-      <br>
+      <p>Adresses: <%= organization.adress %></p>
+      <p>Tel: <%= organization.phone_number %></p>
+      <p>Web: <%= organization.website %></p>
+      <hr>
       <% end %>
     </div>
     <div class="col-6">
