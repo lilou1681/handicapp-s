@@ -1,38 +1,57 @@
-<%= render 'shared/flashes' %>
-<ul>
-   <li><%= link_to (cl_image_tag @child.photo, height: 200, width: 200, crop: :fill) %></li>
-   <li>First name : <%= @child.first_name %></li>
-   <li>Last name : <%= @child.last_name %></li>
-   <li>Birthday : <%= @child.birth_day %></li>
-   <li>Gender : <%= @child.gender %></li>
-   <li>Nationality : <%= @child.nationality %></li>
-   <li>Address : <%= @child.address %></li>
-   <li>Country : <%= @child.country %></li>
-   <li>Security Number : <%= @child.security_number %></li>
-   <li>Life Project : <%= @child.life_project %></li>
-   <% @reminders.each do |reminder| %>
-    <li>Reminder Name : <%= reminder.name %></li>
-    <li>Reminder Date : <%= reminder.date %></li>
-   <% end %>
-</ul>
-
-<%= simple_form_for(@child) do |f| %>
-  <%= f.input :life_project, as: :summernote %>
-  <%= f.button :submit, "Save", class: "btn" %>
-<% end %>
-</br>
-<%= render "reminders/form" %>
-</br>
-<%= link_to "Back to list", children_path, class: 'btn btn-lg'%>
-
-<div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown link
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+<div class="container">
+  <%= render 'shared/flashes' %>
+  <br>
+  <div class="row">
+    <div class="col-4">
+      <div>
+        <div class=" d-flex justify-content-center mb-4">
+          <%= link_to (cl_image_tag @child.photo, height: 200, width: 200, crop: :fill) %>
+        </div>
+        <p>Prénom : <%= @child.first_name %></p>
+        <p>Nom : <%= @child.last_name %></p>
+        <p>Date de naissance : <%= @child.birth_day %></p>
+        <p>Sexe : <%= @child.gender %></li></p>
+        <p>Nationalité : <%= @child.nationality %></p>
+        <p>Adresse : <%= @child.address %></p>
+        <p>Ville : <%= @child.country %></p>
+      <p>Numéro de sécurité sociale : <%= @child.security_number %></li>
+      <!-- <li>Life Project : <%= @child.life_project %></li> -->
+      <% @reminders.each do |reminder| %>
+      <li>Reminder Name : <%= reminder.name %></li>
+      <li>Reminder Date : <%= reminder.date %></li>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="project">
+      <h3>Projet de vie</h3>
+      <%= simple_form_for(@child) do |f| %>
+      <%= f.input :life_project, as: :summernote %>
+      <div class=" d-flex justify-content-center">
+        <%= f.button :submit, "Enregistrer", class: "btn btn-orange" %>
+      </div>
+      <% end %>
+      </br>
+    </div>
   </div>
 </div>
+<div class="agenda">
+  <h3>Ajouter un rappel à votre agenda</h3>
+  <%= render "reminders/form" %>
+</div>
+</br>
+</br>
+<div class=" d-flex justify-content-center">
+  <%= link_to "Retour au tableau de bord", children_path, class: 'btn-orange btn-lg '%>
+</div>
+</div>
+<!-- <div class="dropdown show">
+<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Lien dropdown
+</a>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <a class="dropdown-item" href="#">Action</a>
+  <a class="dropdown-item" href="#">Another action</a>
+  <a class="dropdown-item" href="#">Something else here</a>
+</div>
+</div> -->

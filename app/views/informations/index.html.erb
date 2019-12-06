@@ -1,0 +1,17 @@
+<div class="container">
+<h2 class="d-flex justify-content-center">Informations Pratiques</h2>
+<div class="search  ">
+<%= form_tag informations_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Mot clé"
+  %>
+  <%= submit_tag "Rechercher", class: "btn btn-primary" %>
+<% end %>
+</div>
+<% @informations.each do |information| %>
+    <h3><%= information.title %></h3>
+    <p> <%= information.content %></p>
+<% end %>
+</div>

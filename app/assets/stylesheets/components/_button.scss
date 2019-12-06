@@ -1,0 +1,14 @@
+.btn-orange{
+  background-color:$orange-light ;
+  border: 1px solid $orange-light;
+  border-radius: 50px;
+  color: $white;
+  text-transform: capitalize;
+  margin:0 5px;
+  &:hover {
+    background-color: $yellow-light;
+    border: 1px solid $yellow-light;
+    // opacity: 0.7;
+    color:$white;
+  }
+}
