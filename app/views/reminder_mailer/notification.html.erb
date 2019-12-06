@@ -1,0 +1,11 @@
+<div class="container">
+  <%= link_to(cl_image_tag("Plan_de_travail_1-8_1_ywlja7", height: 100, width: 200, crop: :fill), root_url) %>
+  <div class="justify-content-center pt-3">
+    <h2>Notification de rappel</h2>
+    <div class="rappel pt-4">
+      <p>Enfant : <%= @reminder.children.first_name %></p>
+      <p>Rappel : <%= @reminder.name %></p>
+      <p>Date : <%= @reminder.date %></p>
+    </div>
+  </div>
+</div>
