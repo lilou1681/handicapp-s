@@ -35,6 +35,13 @@
     </div>
   </div>
 </div>
+<h3>Remplir mon dossier MDPH</h3>
+<div class="pdf d-flex justify-content-center">
+  <a href="https://res.cloudinary.com/lilou1681/image/upload/v1575590654/Formulaire_MDPH_auci9k.pdf" target="_blank">
+  <%= cl_image_tag "Formulaire_MDPH_auci9k", { size: '500x700', crop: :thumb, format: :jpeg, class: "img-responsive thumbnail" } %>
+  </a>
+
+</div>
 <div class="agenda">
   <h3>Ajouter un rappel à votre agenda</h3>
   <%= render "reminders/form" %>
