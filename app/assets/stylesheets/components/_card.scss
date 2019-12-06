@@ -16,7 +16,7 @@
   font-size: 24px;
   font-family: 'Cantarell', sans-serif;
   font-weight: bold;
-  color: #F88A2B;
+  color: $orange_light;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -55,31 +55,45 @@
   padding-right: 20px;
   padding-top: 67px;
 }
-
-.card-product-button-edit .btn{
-  background-color: #F88A2B;
-  color: #ffffff;
-  border: 1px solid #F88A2B;
-  border-radius: 5px;
-  text-transform: capitalize;
-  font-size: 20px;
-  &:hover {
-    background-color: #FFCC36;
-    border: 1px solid #FFCC36;
-    opacity: 0.7;
+.card-product-button-edit i{
+  color:$orange-light;
+   &:hover {
+    color:$orange;
+  }
+}
+.card-product-button-delete i{
+  color:$orange-light;
+   &:hover {
+    color:$orange;
   }
 }
 
-.card-product-button-delete .btn{
-  background-color: #F88A2B;
-  color: #ffffff;
-  border: 1px solid #F88A2B;
-  border-radius: 5px;
-  text-transform: capitalize;
-  font-size: 20px;
-  &:hover {
-    background-color: #FFCC36;
-    border: 1px solid #FFCC36;
-    opacity: 0.7;
-  }
-}
+// .card-product-button-edit .btn{
+//   background-color: $orange-light;
+//   color: $white;
+//   border: 1px solid $orange-light;
+//   border-radius: 5px;
+//   text-transform: capitalize;
+//   font-size: 20px;
+//   &:hover {
+//     background-color: $yellow;
+//     border: 1px solid $yellow;
+//     opacity: 0.7;
+//     color:$white;
+//   }
+// }
+
+// .card-product-button-delete .btn{
+//   background-color: $orange-light;
+//   color: $white;
+//   border: 1px solid $orange-light;
+//   border-radius: 5px;
+//   text-transform: capitalize;
+//   font-size: 20px;
+//   &:hover {
+//     background-color: $yellow;
+//     border: 1px solid $yellow;
+//     // opacity: 0.7;
+//     color:$white;
+//   }
+// }
