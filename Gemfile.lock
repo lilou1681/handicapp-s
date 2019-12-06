@@ -62,7 +62,6 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
-    chronic (0.10.2)
     cloudinary (1.9.1)
       aws_cf_signer
       rest-client
@@ -253,8 +252,6 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
-    whenever (1.0.0)
-      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -292,7 +289,6 @@ DEPENDENCIES
   uglifier
   web-console (>= 3.3.0)
   webpacker
-  whenever
 
 RUBY VERSION
    ruby 2.6.3p62
