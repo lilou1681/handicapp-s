@@ -1,54 +1,73 @@
-<div class="container">
+<div class="container_show">
   <%= render 'shared/flashes' %>
-  <br>
+  <h2 class="d-flex justify-content-center"><%= @child.first_name %> <%= @child.last_name %></h2>
   <div class="row">
-    <div class="col-4">
+    <div class="col-12 col-lg-4">
       <div>
         <div class=" d-flex justify-content-center mb-4">
           <%= link_to (cl_image_tag @child.photo, height: 200, width: 200, crop: :fill) %>
         </div>
-        <p>Prénom : <%= @child.first_name %></p>
-        <p>Nom : <%= @child.last_name %></p>
         <p>Date de naissance : <%= @child.birth_day %></p>
         <p>Sexe : <%= @child.gender %></li></p>
         <p>Nationalité : <%= @child.nationality %></p>
         <p>Adresse : <%= @child.address %></p>
         <p>Ville : <%= @child.country %></p>
       <p>Numéro de sécurité sociale : <%= @child.security_number %></li>
-      <!-- <li>Life Project : <%= @child.life_project %></li> -->
-      <% @reminders.each do |reminder| %>
-      <li>Reminder Name : <%= reminder.name %></li>
-      <li>Reminder Date : <%= reminder.date %></li>
-      <% end %>
     </div>
   </div>
-  <div class="col-8">
-    <div class="project">
-      <h3>Projet de vie</h3>
-      <%= simple_form_for(@child) do |f| %>
-      <%= f.input :life_project, as: :summernote %>
-      <div class=" d-flex justify-content-center">
-        <%= f.button :submit, "Enregistrer", class: "btn btn-orange" %>
+  <div class="col-12 col-lg-8 ">
+    <h3 class="d-flex justify-content-center">Créer le projet de vie</h3>
+    <%= simple_form_for(@child) do |f| %>
+    <%= f.input :life_project, as: :summernote %>
+    <div class=" d-flex justify-content-center">
+      <%= f.button :submit, "Enregistrer", class: "btn btn-orange" %>
+    </div>
+    <% end %>
+    <!-- <p>Life Project : <%= @child.life_project %></p> -->
+    </br>
+  </div>
+</div>
+<br>
+<h3 class="d-flex justify-content-center">Remplir mon dossier MDPH - le certificat médical</h3>
+<div class="row ">
+  <div class="col-12 col-lg-6 d-flex justify-content-center ">
+    <a href="https://res.cloudinary.com/lilou1681/image/upload/v1575756596/Formulaire_MDPH_fujhtk.pdf" target="_blank">
+      <%= cl_image_tag "Formulaire_MDPH_fujhtk", { size: '250x350', crop: :thumb, format: :jpeg, class: "img-responsive thumbnail" } %>
+    </a>
+  </div>
+  <div class="col-12 col-lg-6 d-flex justify-content-center  ">
+    <a href="https://res.cloudinary.com/lilou1681/image/upload/v1575756952/certificat_m%C3%A9dical_qygd1m.pdf" target="_blank">
+      <%= cl_image_tag "certificat_médical_qygd1m", { size: '250x350', crop: :thumb, format: :jpeg, class: "img-responsive thumbnail" } %>
+    </a>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-12 col-lg-7">
+    <div class="agenda">
+      <h3>CALENDRIER</h3>
+      <%= month_calendar date: @reminders do |date, reminders| %>
+      <%= date %>
+      <% @reminders.each do |reminder| %>
+      <div>
+        <%= reminder.name %>
       </div>
       <% end %>
-      </br>
+      <% end %>
     </div>
   </div>
-</div>
-<h3>Remplir mon dossier MDPH</h3>
-<div class="pdf d-flex justify-content-center">
-  <a href="https://res.cloudinary.com/lilou1681/image/upload/v1575590654/Formulaire_MDPH_auci9k.pdf" target="_blank">
-  <%= cl_image_tag "Formulaire_MDPH_auci9k", { size: '500x700', crop: :thumb, format: :jpeg, class: "img-responsive thumbnail" } %>
-  </a>
-</div>
-<div class="agenda">
-  <h3>Ajouter un rappel à votre agenda</h3>
-  <%= render "reminders/form" %>
-</div>
-</br>
-</br>
-<div class=" d-flex justify-content-center">
-  <%= link_to "Retour au tableau de bord", children_path, class: 'btn-orange btn-lg '%>
+  <div class="col-12 col-lg-5">
+    <h3>Liste de vos rappels</h3>
+    <% @reminders.each do |reminder| %>
+    <p><%= reminder.name %> à renouveller le : <%= reminder.date%></p>
+    <% end %>
+    <h3>Ajouter un rappel à votre agenda</h3>
+    <%= render "reminders/form" %>
+    <br> <br>
+    <div class=" d-flex justify-content-center">
+      <%= link_to "Retour au tableau de bord", children_path, class: 'btn-orange btn-lg '%>
+    </div>
+  </div>
 </div>
 </div>
 <!-- <div class="dropdown show">
