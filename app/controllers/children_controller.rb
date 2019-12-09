@@ -7,6 +7,7 @@ class ChildrenController < ApplicationController
   end
 
   def show
+    @doc = Doc.new
     if @child.user != current_user
       redirect_to children_path
     else

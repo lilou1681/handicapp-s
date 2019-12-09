@@ -1,6 +1,7 @@
 class Children < ApplicationRecord
   belongs_to :user
   has_many :reminders, dependent: :destroy
+  has_many :docs, dependent: :destroy
 
   GENDERS = ["Male", "Female"]
 
