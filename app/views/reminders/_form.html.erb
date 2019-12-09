@@ -1,5 +1,5 @@
 <%= simple_form_for([@child, @reminder]) do |f| %>
   <%= f.input :name %>
   <%= f.input :date, html5: true %>
-  <%= f.button :submit, class: "btn btn-orange" %>
+  <%= f.button :submit, "Ajouter un rappel", class: "btn btn-orange" %>
 <% end %>
