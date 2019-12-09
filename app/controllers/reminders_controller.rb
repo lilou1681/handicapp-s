@@ -13,6 +13,12 @@ class RemindersController < ApplicationController
     end
   end
 
+  def destroy
+    @reminder = Reminder.find(params[:child_id])
+    @reminder.destroy
+    redirect_to child_path(@reminder.children)
+  end
+
   private
 
   def reminders_params
