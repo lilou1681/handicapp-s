@@ -23,11 +23,14 @@
       <%= f.button :submit, "Enregistrer", class: "btn btn-orange" %>
     </div>
     <% end %>
-    <!-- <p>Life Project : <%= @child.life_project %></p> -->
-    </br>
   </div>
 </div>
 <br>
+<div class=" d-flex justify-content-center">
+  <%= link_to "Besoin d'aide pour créer le projet de vie, toutes les informations disponibles ici ", help_path, class: 'btn-orange btn-lg ' %>
+</div>
+<br>
+<h3 class=" d-flex justify-content-center">MES FORMULAIRES MDPH</h3>
 <h3 class="d-flex justify-content-center">Remplir mon dossier MDPH - le certificat médical</h3>
 <div class="row ">
   <div class="col-12 col-lg-6 d-flex justify-content-center ">
@@ -42,26 +45,26 @@
   </div>
 </div>
 <br>
-<div class="row">
+<h3 class="d-flex justify-content-center">CALENDRIER DES MES RAPPELS</h3>
+<div class="row align-items-center">
   <div class="col-12 col-lg-7">
     <div class="agenda">
-      <h3>CALENDRIER</h3>
-      <%= month_calendar date: @reminders do |date, reminders| %>
+      <%= month_calendar events: @reminders do |date, reminders| %>
       <%= date %>
-      <% @reminders.each do |reminder| %>
+      <% reminders.each do |reminder| %>
       <div>
-        <%= reminder.name %>
+        <strong class="reminder"><%= reminder.name %></strong>
       </div>
       <% end %>
       <% end %>
     </div>
   </div>
   <div class="col-12 col-lg-5">
-    <h3>Liste de vos rappels</h3>
+    <h3>Tous mes rappels</h3>
     <% @reminders.each do |reminder| %>
     <p><%= reminder.name %> à renouveller le : <%= reminder.date%></p>
     <% end %>
-    <h3>Ajouter un rappel à votre agenda</h3>
+    <h3>Ajouter un rappel à mon agenda</h3>
     <%= render "reminders/form" %>
     <br> <br>
     <div class=" d-flex justify-content-center">
