@@ -22,7 +22,7 @@ if (document.querySelector('#map')){
   $.extend(true, $.summernote.lang, {
     'en-US': {
       print: {
-        print: 'Imprimer'
+        print: 'Enregistrer en PDF'
       }
     }
   });
@@ -88,7 +88,7 @@ if (document.querySelector('#map')){
       context.memo('button.print', function () {
         // create button
         var button = ui.button({
-          contents: '<i class="fa fa-print"/> ',
+          contents: '<i class="fas fa-file-pdf">',
           tooltip: lang.print.print,
           container: options.container,
           click: function () {

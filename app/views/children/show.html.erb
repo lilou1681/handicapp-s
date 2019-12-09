@@ -62,8 +62,10 @@
   <div class="col-12 col-lg-5">
     <h3>Tous mes rappels</h3>
     <% @reminders.each do |reminder| %>
-    <p><%= reminder.name %> à renouveller le : <%= reminder.date%></p>
-    <% end %>
+    <p><%= reminder.name %> à renouveller le : <%= reminder.date%> <%= link_to child_reminder_path(reminder), method: :delete, data: { confirm: "Sur to delete?" }, class: 'btn p-1 mb-4' do %>
+        <i class="fas fa-trash"></i>
+        <% end %>
+      <% end %></p>
     <h3>Ajouter un rappel à mon agenda</h3>
     <%= render "reminders/form" %>
     <br> <br>
@@ -73,13 +75,3 @@
   </div>
 </div>
 </div>
-<!-- <div class="dropdown show">
-<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Lien dropdown
-</a>
-<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-  <a class="dropdown-item" href="#">Action</a>
-  <a class="dropdown-item" href="#">Another action</a>
-  <a class="dropdown-item" href="#">Something else here</a>
-</div>
-</div> -->
