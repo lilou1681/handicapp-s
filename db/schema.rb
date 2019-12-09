@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_06_134334) do
+ActiveRecord::Schema.define(version: 2019_12_09_150212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 2019_12_06_134334) do
     t.datetime "updated_at", null: false
     t.string "photo"
     t.index ["user_id"], name: "index_children_on_user_id"
+  end
+
+  create_table "docs", force: :cascade do |t|
+    t.string "name"
+    t.string "url"
+    t.bigint "children_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "file"
+    t.index ["children_id"], name: "index_docs_on_children_id"
   end
 
   create_table "information", force: :cascade do |t|
@@ -80,5 +90,6 @@ ActiveRecord::Schema.define(version: 2019_12_06_134334) do
   end
 
   add_foreign_key "children", "users"
+  add_foreign_key "docs", "children", column: "children_id"
   add_foreign_key "reminders", "children", column: "children_id"
 end
