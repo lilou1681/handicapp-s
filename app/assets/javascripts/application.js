@@ -9,3 +9,4 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= summernote/plugin/hello/summernote-ext-hello
