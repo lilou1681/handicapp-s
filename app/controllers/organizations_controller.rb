@@ -1,4 +1,5 @@
 class OrganizationsController < ApplicationController
+  skip_before_action :authenticate_user!
   def index
     @organizations = Organization.all
     @organizations_geo = Organization.geocoded
