@@ -92,6 +92,7 @@ if (document.querySelector('#map')){
           tooltip: lang.print.print,
           container: options.container,
           click: function () {
+            console.log("coucou")
             var $frame = getPrintframe();
             var content = context.invoke('code');
 
