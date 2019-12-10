@@ -3,7 +3,7 @@ class Children < ApplicationRecord
   has_many :reminders, dependent: :destroy
   has_many :docs, dependent: :destroy
 
-  GENDERS = ["Male", "Female"]
+  GENDERS = ["Homme", "Femme"]
 
   validates :first_name, presence: true
   validates :last_name, presence: true

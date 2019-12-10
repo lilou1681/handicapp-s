@@ -1,14 +1,30 @@
-<%= simple_form_for(@child, url: children_path) do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :birth_day, html5: true %>
-  <%= f.input :gender, collection: Children::GENDERS %>
-  <%= f.input :nationality %>
-  <%= f.input :country, as: :string %>
-  <%= f.input :address %>
-  <%= f.input :security_number %>
-<%#= f.input :life_project %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.button :submit, class: "btn-orange" %>
-<% end %>
+<div class="container-child">
+  <div class="row justify-content-center mt-2">
+    <div class="child col-lg-8 col-xm-12 m-2">
+      <div class="row justify-content-center">
+        <h3>MODIFIER LES INFORMATIONS DE VOTRE ENFANT</h3>
+      </div>
+      <%= simple_form_for(@child, url: children_path) do |f| %>
+      <div class="form-inputs-child">
+          <%= f.input :first_name, label: false, placeholder: "Prénom" %>
+          <%= f.input :last_name, label: false, placeholder: "Nom" %>
+          <div class="birthday">
+            <%= f.input :birth_day, html5: true, label: false, placeholder: "Date de naissance"%>
+          </div>
+          <%= f.input :gender, collection: Children::GENDERS, label: false, :selected => Children::GENDERS%>
+          <%= f.input :nationality, label: false, placeholder: "Nationalité" %>
+          <%= f.input :country, as: :string, label: false, placeholder: "Pays" %>
+          <%= f.input :address, label: false, placeholder: "Addresse" %>
+          <%= f.input :security_number, label: false, placeholder: "Numéro de sécurité sociale" %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <div class="row justify-content-center">
+            <div class="form-actions">
+              <%= f.button :submit, "Valider", class: "btn-children"%>
+            </div>
+          </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
