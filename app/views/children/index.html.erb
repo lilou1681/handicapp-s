@@ -1,7 +1,5 @@
-<div class="container">
+<div class="container-index">
   <br>
-  <%= link_to 'Ajouter un enfant', new_child_path, class: 'btn btn-orange p-1' %>
-    <br>
   <% if @children.present? %>
   <% @children.each do |child| %>
   <div class="card-product">
@@ -31,5 +29,7 @@
   </div>
   <% end %>
   <% end %>
-
+ <br>
+  <%= link_to 'Ajouter un dossier', new_child_path, class: 'btn btn-orange p-1' %>
+    <br>
 </div>

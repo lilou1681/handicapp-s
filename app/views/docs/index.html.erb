@@ -1,16 +1,21 @@
-<div class="container">
+<div class="container-doc">
   <h2 class="row d-flex justify-content-center">Vos documents</h2>
-<div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center">
     <% @child.docs.each do |doc| %>
     <div class="card-doc" >
       <p class="d-flex justify-content-center"><%= doc.name %></p>
       <p class="d-flex justify-content-center"><%= doc.created_at %></p>
-       <div class="d-flex justify-content-center">
-      <%= link_to cl_image_path doc.file do %>
+      <div class="d-flex justify-content-center">
+        <%= link_to cl_image_path doc.file do %>
         <%= cl_image_tag(doc.file, { size: '250x350', crop: :thumb, format: :jpeg, class: "img-responsive thumbnail"}) %>
-      <% end %>
+        <% end %>
       </div>
     </div>
     <% end %>
   </div>
+  <br>
+  <div class="d-flex justify-content-center">
+    <%= link_to "Retour au tableau de bord", children_path, class: 'btn-orange btn-lg '%>
+  </div>
+  <br>
 </div>
