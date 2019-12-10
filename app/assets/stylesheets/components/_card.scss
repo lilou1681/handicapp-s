@@ -67,33 +67,21 @@
     color:$orange;
   }
 }
-
-// .card-product-button-edit .btn{
-//   background-color: $orange-light;
-//   color: $white;
-//   border: 1px solid $orange-light;
-//   border-radius: 5px;
-//   text-transform: capitalize;
-//   font-size: 20px;
-//   &:hover {
-//     background-color: $yellow;
-//     border: 1px solid $yellow;
-//     opacity: 0.7;
-//     color:$white;
-//   }
-// }
-
-// .card-product-button-delete .btn{
-//   background-color: $orange-light;
-//   color: $white;
-//   border: 1px solid $orange-light;
-//   border-radius: 5px;
-//   text-transform: capitalize;
-//   font-size: 20px;
-//   &:hover {
-//     background-color: $yellow;
-//     border: 1px solid $yellow;
-//     // opacity: 0.7;
-//     color:$white;
-//   }
-// }
+.card-doc {
+  position: relative;
+  overflow: hidden;
+  padding:20px;
+  width:400px;
+  background: white;
+  box-shadow: 0 0 15px $orange;
+  display: flex;
+  flex-flow:column wrap;
+  justify-content:center;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin:10px;
+}
+.card-doc p{
+  color:$orange;
+  font-weight: bold;
+}
