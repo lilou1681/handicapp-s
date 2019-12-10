@@ -7,7 +7,7 @@
       <p class="d-flex justify-content-center"><%= doc.created_at %></p>
        <div class="d-flex justify-content-center">
       <%= link_to cl_image_path doc.file do %>
-      <%= cl_image_tag(doc.file, { size: '250x350', crop: :thumb, format: :jpeg, class: "img-responsive thumbnail"}) %>
+        <%= cl_image_tag(doc.file, { size: '250x350', crop: :thumb, format: :jpeg, class: "img-responsive thumbnail"}) %>
       <% end %>
       </div>
     </div>
