@@ -11,6 +11,11 @@ class DocsController < ApplicationController
     redirect_to child_docs_path
   end
 
+  # def order
+  #   Doc.order(created_at: :desc)
+  # #  SELECT "docs".* FROM "docs" ORDER BY "docs"."created_at" DESC
+  # end
+
   private
 
   def set_child
