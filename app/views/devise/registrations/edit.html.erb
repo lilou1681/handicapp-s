@@ -29,12 +29,12 @@
                 label:false,
                 required: false,
                 placeholder: "Mot de passe",
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "Nouveau mot de passe" } %>
     <%= f.input :password_confirmation,
                 label:false,
                 placeholder: "Confirmation",
                 required: false,
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "Nouveau mot de passe" } %>
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
     <%= f.input :current_password,
@@ -42,7 +42,7 @@
                 label:false,
                 required: true,
                 placeholder: "Mot de passe actuel",
-                input_html: { autocomplete: "current-password" } %>
+                input_html: { autocomplete: "Mot de passe actuel" } %>
   </div>
   <div class="row justify-content-center">
   <div class="form-actions">
