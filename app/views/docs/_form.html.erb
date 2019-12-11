@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center">
 <%= simple_form_for([@child, @doc]) do |f| %>
-   <%= f.input :name, label: false, collection: Doc::NAMES, :selected => Doc::NAMES %>
-  <%= f.input :file %>
+  <%= f.input :name, label: false, collection: Doc::NAMES, :selected => Doc::NAMES %>
+  <%= f.input :file, label:false %>
   <%= f.input :file_cache, as: :hidden %>
   <%= f.button :submit, "Ajouter un dossier", class: "btn btn-orange" %>
 <% end %>
