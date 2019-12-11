@@ -1,11 +1,18 @@
 <div class="container">
   <%= link_to(cl_image_tag("Plan_de_travail_1-8_cz27so", height: 100, width: 200, crop: :fill), root_url) %>
   <div class="justify-content-center pt-3">
-    <h2>Notification de rappel</h2>
-    <div class="rappel pt-4">
-      <p>Enfant : <%= @reminder.children.first_name %></p>
-      <p>Rappel : <%= @reminder.name %></p>
-      <p>Date : <%= @reminder.date %></p>
+    <h2>Notification pour <%= @reminder.name %> à renouveller avant le <%= @reminder.date %></h2>
+    <div class="card-dashboard">
+      <h3>Bonjour <%= @user.first_name %> </h3>
+      <p>Handic'apps vous rappelle qu'il faut renouveller le dossier
+        <%= @reminder.name %> de <%= @reminder.children.first_name %> avant
+        le <%= @reminder.date %>.</p>
+
+        <p>Si vous souhaitez avoir d'autres information rendez-vous sur
+        <a href="http://www.handicapps.net/">Accèder mon compte</a></p>
+
+    </div>
     </div>
   </div>
-</div>
+
+

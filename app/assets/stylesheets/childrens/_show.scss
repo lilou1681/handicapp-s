@@ -21,9 +21,7 @@ h3{
   color:#ff8a00;
   text-transform: uppercase;
 }
-i{
-  color:$orange;
-}
+
 
 .edit {
   position:absolute;
@@ -34,4 +32,11 @@ i{
 }
 .agenda{
   margin:auto 250px;
+}
+.trash{
+  list-style: none;
+  i{
+  color:$orange;
+  margin-top:25px;
+  }
 }
