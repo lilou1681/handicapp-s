@@ -1,6 +1,6 @@
 Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: "http://handicapp-lilou1681.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: "http://www.handicapps.net/" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
