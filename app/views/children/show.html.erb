@@ -71,11 +71,12 @@
     <div class="col-12 col-lg-6 align-items-center">
       <h3>Tous mes rappels</h3>
       <% @reminders.each do |reminder| %>
-      <i class="fas fa-trash"></i>
-        <%= reminder.name %> à renouveller le : <%= reminder.date%> <%= link_to child_reminder_path(reminder), method: :delete, data: { confirm: "Sur to delete?" }, class: 'btn p-1 mb-4' do %>
-
+        <li class="trash"> <%= link_to child_reminder_path(reminder), method: :delete, data: { confirm: "Sur to delete?" }, class: 'btn p-1 mb-4' do %>
+        <i class="fas fa-trash "></i>
         <% end %>
-      <% end %>
+         <%= reminder.name %> à renouveller le : <%= reminder.date%></li>
+
+      <% end %></li>
     </div>
     <div class="col-12 col-lg-6">
       <h3>Ajouter un rappel à mon agenda</h3>
