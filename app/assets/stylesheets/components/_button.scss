@@ -1,8 +1,7 @@
 .btn-orange{
-  background-color:$orange-light ;
-  border: 1px solid $orange-light;
-  border-radius: 50px;
-  color: $white;
+    background: linear-gradient(220.3deg, #FFC000 1.55%, #FF8A00 95.8%);
+  box-shadow: 0px 12px 35px rgba(160, 121, 0, 0.2);
+   border-radius: 100px;  color: $white;
   margin:0 5px;
   &:hover {
     background-color: $yellow-light;

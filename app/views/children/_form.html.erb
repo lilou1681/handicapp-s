@@ -8,9 +8,7 @@
       <div class="form-inputs-child">
           <%= f.input :first_name, label: false, placeholder: "Prénom" %>
           <%= f.input :last_name, label: false, placeholder: "Nom" %>
-          <div class="birthday">
-            <%= f.input :birth_day, html5: true, label: false, placeholder: "Date de naissance"%>
-          </div>
+          <%= f.input :birth_day, html5: true, label: false, placeholder: "Date de naissance"%>
           <%= f.input :gender, collection: Children::GENDERS, label: false, :selected => Children::GENDERS%>
           <%= f.input :nationality, label: false, placeholder: "Nationalité" %>
           <%= f.input :country, as: :string, label: false, placeholder: "Pays" %>

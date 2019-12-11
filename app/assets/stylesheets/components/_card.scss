@@ -85,3 +85,15 @@
   color:$orange;
   font-weight: bold;
 }
+.card-dashboard {
+  position: relative;
+  overflow: hidden;
+  padding:20px;
+  background: white;
+  box-shadow: 0 0 15px $orange;
+  display: flex;
+  flex-flow:column wrap;
+  justify-content:center;
+  margin-top: 20px;
+  border-radius: 10px;
+}

@@ -1,4 +1,5 @@
 <div class="container">
+  <div class="info-bg">
 <h2 class="d-flex justify-content-center">Informations Pratiques</h2>
 <div class="search">
 <%= form_tag informations_path, method: :get do %>
@@ -14,4 +15,5 @@
     <h3><%= information.title %></h3>
     <p> <%= information.content %></p>
 <% end %>
+</div>
 </div>
