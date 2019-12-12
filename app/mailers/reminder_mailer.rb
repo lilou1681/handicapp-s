@@ -1,5 +1,5 @@
 class ReminderMailer < ApplicationMailer
-  default from: "handicapps1681@gmail.com"
+  default from: "handicapps2019@gmail.com"
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
