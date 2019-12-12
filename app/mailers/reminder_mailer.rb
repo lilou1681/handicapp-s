@@ -1,5 +1,5 @@
 class ReminderMailer < ApplicationMailer
-
+  default from: "handicapps1681@gmail.com"
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -7,10 +7,10 @@ class ReminderMailer < ApplicationMailer
   #
   def notification(reminder)
     @reminder = reminder
-    @user = reminder.children.user # Instance variable => available in view
+    @user = @reminder.children.user # Instance variable => available in view
     mail(
       to: @user.email,
-      subject: "Rappel pour #{reminder.name} du #{reminder.date}")
+      subject: "Rappel pour #{@reminder.name} du #{@reminder.date}")
     # This will render a view in `app/views/user_mailer`!
   end
 end
