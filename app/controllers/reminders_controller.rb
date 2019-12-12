@@ -5,7 +5,8 @@ class RemindersController < ApplicationController
     @reminder.children = @child
     if @reminder.save
       flash[:notice] = "The reminder has been registered"
-      ReminderMailer.notification(@reminder).deliver_now
+      notif = ReminderMailer.with(reminder: @reminder).notification
+      notif.deliver_now
       redirect_to child_path(@child)
     else
       flash[:alert] = "Error, the reminder couldn't be registered"
