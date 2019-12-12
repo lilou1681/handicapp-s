@@ -5,8 +5,8 @@ class ReminderMailer < ApplicationMailer
   #
   #   en.reminder_mailer.notification.subject
   #
-  def notification(reminder)
-    @reminder = reminder
+  def notification
+    @reminder = params[:reminder]
     @user = @reminder.children.user # Instance variable => available in view
     mail(
       to: @user.email,
